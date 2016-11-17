@@ -1,0 +1,9 @@
+workflow:
+
+run generate_rotations.py
+	- reads in camera_traj.json for locations in x,y,z space
+	- for each of these coordinates, do all the rotations
+	- write the output to angles.json
+start unrealcv world
+run capture_img.py -> image capture
+	
