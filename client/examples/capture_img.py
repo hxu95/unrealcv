@@ -12,9 +12,6 @@ i = 0
 for entry in camera_trajectory:
 
     # Set position of the first camera
-    #print entry
-    #print entry['location']
-    #print entry['rotation']
     client.request('vset /camera/0/location {x} {y} {z}'.format(**entry['location']))
     client.request('vset /camera/0/rotation {pitch} {yaw} {roll}'.format(**entry['rotation']))
     # Get image and ground truth
